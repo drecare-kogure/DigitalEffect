@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid;
+}
+html{
+  font-size: 62.5%;
+}
+.mainVisual{
+    position: relative;
+    height: 900px;
+    background-image: url("../img/gazou1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+svg{
+    position: absolute;
+}
+.mask{
+    stroke: #fff;
+    stroke-width: 3;
+    stroke-dasharray: 260;
+    animation: svgText 2s linear infinite;
+}
+@keyframes svgText{
+    0%{
+        stroke-dashoffset: 260;
+    }
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+.mainVisual__textContain{
+    display: none;
+}
+.mainVisual__text{
+    mask: url(#mask);
+    font-size: 40px;
+}
